@@ -20,7 +20,7 @@ namespace PiperChatWebApiCore
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder.UseUrls("http://192.168.43.99:5000","http://localhost:5000").UseStartup<Startup>();
                 });
     }
 }

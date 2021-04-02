@@ -8,6 +8,7 @@ namespace PiperChatWebApiCore.Hubs
 {
     public class ChatHub:Hub
     {
+      
         public async Task SendMessageToServer(string message)
         {
             await Clients.All.SendAsync("ReceiveMessage", message);
