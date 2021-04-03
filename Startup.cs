@@ -27,7 +27,9 @@ namespace PiperChatWebApiCore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            //services.AddDbContextPool<PiperChatWebApiData.Models.PiperChatCoreDbContext>(options => options (Configuration.GetConnectionString("Chinook")));
             services.AddSignalR();
+            //services.AddDbContext<EmployeeContext>(options => options.UseSqlServer(connection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
